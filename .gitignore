@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Compiled class file
+=======
+﻿# Compiled class file
+>>>>>>> add_mainPage
 *.class
 
 # Log file
@@ -19,5 +23,23 @@
 *.tar.gz
 *.rar
 
+<<<<<<< HEAD
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+=======
+# Intellij
+.idea/
+*.iws
+out/
+classes/
+
+# Maven
+log/
+target/
+
+# iml files
+*.iml
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+>>>>>>> add_mainPage
