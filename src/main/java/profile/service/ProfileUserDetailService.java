@@ -1,0 +1,30 @@
+package profile.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+import profile.entity.ProfileUserDetails;
+import profile.entity.User;
+import profile.repository.UserRepository;
+
+import java.util.Optional;
+
+@Service
+@Component
+public class ProfileUserDetailService implements UserDetailsService {
+
+    @Autowired
+    UserRepository userRepository;
+
+    @Override
+    public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
+        Optional<User> user = userRepository.findByUserName(userName);
+
+        user.orElseThrow(() -> new UsernameNotFoundException("Not found: " + userName));
+
+        return user.map(ProfileUserDetails::new).get();
+    }
+}
