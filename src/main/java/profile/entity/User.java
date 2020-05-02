@@ -1,6 +1,7 @@
 package profile.entity;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -10,6 +11,7 @@ import javax.validation.constraints.Size;
 
 @Entity
 @Data
+@NoArgsConstructor
 @Table(name = "user")
 public class User {
     @Id
@@ -24,6 +26,6 @@ public class User {
     @NotNull
     @Size(min = 8, max = 20)
     private String password;
-    private boolean active;
-    private String roles;
+    private boolean active = true;
+    private String roles = "ROLE_USER";
 }
