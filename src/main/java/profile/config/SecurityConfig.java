@@ -32,12 +32,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     .antMatchers("/").permitAll()
                 .and()
                     .formLogin()
+                    .defaultSuccessUrl("/page2", true)
                 .and()
                     .logout()
                     .invalidateHttpSession(true)
                     .clearAuthentication(true)
                     .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                    .logoutSuccessUrl("/login?logout")
+                    .logoutSuccessUrl("/")
                     .permitAll();
     }
 

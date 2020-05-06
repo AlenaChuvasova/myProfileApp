@@ -29,6 +29,11 @@ public class MainController {
         return "register";
     }
 
+    @GetMapping("/login")
+    public String login() {
+        return "login";
+    }
+
     @GetMapping("/user")
     public String user() {
         return ("user");

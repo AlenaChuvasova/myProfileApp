@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;600&display=swap" rel="stylesheet">
+    <title>Alena</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Baloo Thambi 2', cursive;
+            font-size: 16px;
+        }
+
+        h3 {
+            margin-top: 15px;
+            margin-left: 15px;
+            font-weight: 600;
+        }
+
+        a {
+            margin-left: 15px;
+            font-weight: 400;
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            color: blue;
+            text-decoration: underline;
+        }
+
+        .profile {
+            margin: 0 auto;
+            border: inset 5px grey;
+            width: 600px;
+            height: auto;
+            padding-bottom: 15px;
+        }
+
+        .full_name {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .photo img {
+            width: 35%;
+            margin-left: 15px;
+            float: left;
+        }
+
+        .about-info {
+            float: right;
+            margin-right: 50px;
+            font-size: 15px;
+        }
+
+        .skills {
+            padding-top: 20px;
+            clear: both;
+        }
+
+        .skills_type {
+            list-style-type: disk;
+            margin-left: 30px;
+            margin-top: 10px;
+            font-family: sans-serif
+        }
+
+        .exp {
+            margin-top: 10px;
+            margin-left: 0px;
+            font-size: 15px;
+            font-weight: 800;
+        }
+
+        .exp-info {
+            margin-top: 10px;
+            margin-left: 15px;
+            font-weight: 400;
+        }
+
+        .cert {
+            margin-left: 15px;
+            margin-top: 15px;
+        }
+
+        .cert h3 {
+            margin-bottom: 15px;
+            margin-left: 0px;
+        }
+
+        .core ul {
+            list-style-type: disc;
+            font-size: 15px;
+            margin-top: 15px;
+            margin-left: 30px;
+        }
+
+        .core-text {
+            margin-top: 15px;
+            margin-left: 30px;
+        }
+
+        input.inabi_more {
+            display: none;
+        }
+
+        input.inabi_more + label + .inabi_obl {
+            display: none;
+        }
+
+        input.inabi_more:checked + label + .inabi_obl {
+            display: block;
+        }
+
+        input.inabi_more + label {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        input.inabi_more:checked + label {
+            display: none;
+        }
+
+        input.inabi + label + div + input + label {
+            display: none;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        input.inabi_more:checked + label + div + input + label {
+            display: block;
+        }
+
+        .prof_exp h3 {
+            margin-bottom: 10px;
+        }
+
+        .prof_exp label {
+            font-size: 15px;
+        }
+
+        .prof_exp label:hover {
+            color: green;
+        }
+
+        .inabi {
+            margin-left: 15px;
+        }
+
+        .inabi_obl ul li {
+            margin-left: 15px;
+        }
+
+        input.si_more {
+            display: none;
+        }
+
+        input.si_more + label + .si_obl {
+            display: none;
+        }
+
+        input.si_more:checked + label + .si_obl {
+            display: block;
+        }
+
+        input.si_more + label {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        input.si_more:checked + label {
+            display: none;
+        }
+
+        input.si_more + label + div + input + label {
+            display: none;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        input.si_more:checked + label + div + input + label {
+            display: block;
+        }
+
+        .si {
+            margin-left: 15px;
+        }
+
+        .si_obl ul li {
+            margin-left: 15px;
+        }
+
+        input.sencom_more {
+            display: none;
+        }
+
+        input.sencom_more + label + .sencom_obl {
+            display: none;
+        }
+
+        input.sencom_more:checked + label + .sencom_obl {
+            display: block;
+        }
+
+        input.sencom_more + label {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        input.sencom_more:checked + label {
+            display: none;
+        }
+
+        input.sencom_more + label + div + input + label {
+            display: none;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        input.sencom_more:checked + label + div + input + label {
+            display: block;
+        }
+
+        .sencom {
+            margin-left: 15px;
+        }
+
+        .sencom_obl ul li {
+            margin-left: 15px;
+        }
+
+        .edu {
+            margin-left: 15px;
+            margin-top: 15px;
+        }
+
+        .edu h3 {
+            margin-left: 0px;
+            font-weight: 800;
+        }
+    </style>
+</head>
+<br>
+<div class="profile">
+    <div class="full_name">
+        <h1>Alena Chuvasova </h1>
+        <h2>Java Developer (junior)</h2>
+    </div>
+    <br>
+    <div class="about">
+        <div class="photo">
+            <img src="alena.jpg" alt="photopic">
+        </div>
+        <div class="about-info">
+            <p><strong>phone</strong>: 375 29 753 93 53</p>
+            <p><strong>e-mail</strong>: alena.chuvasova@gmail.com</p>
+            <p><strong>DOB</strong>: 06.03.1990</p>
+            <p><strong>address</strong>: Minsk</p>
+            <p><strong>english</strong>: B2 – Upper Intermediate</p>
+        </div>
+    </div>
+    <br>
+    <div class="skills">
+        <h3>Skills:</h3>
+        <ul class="skills_type">
+            <li>Language: Java SE, Java EE</li>
+            <li>Tools: Spring Core, Spring MVC, OAuth, ORM, Git, Bitbucket</li>
+            <li>Rest: Spring Boot, Spring MVC, Postman, Swagger, Jersey DB</li>
+            <li>DB: MySQL, HSQLDB, Hibernate, Liquibase, JUnit/DBUnit</li>
+            <li>OS: Windows/Ubuntu</li>
+        </ul>
+    </div>
+    <div class="exp">
+        <h3>Experience:</h3>
+        <p class="exp-info">JavaFX project with logging and additional exceptions.</p>
+        <a href="https://gitlab.com/Alena_Ch/_figuredrawerfx" target=_blank title="Github">FigureDrawerFX</a>
+        <p class="exp-info">Participate in full lifecycle of development web application using Spring MVC,
+            test covering, JPA(Hibernate), saving data to MySQL database, convert data to PDF files. </p>
+        <a href="https://github.com/AlenaChuvasova/projectTimesheetManagement" target=_blank title="Github">TimesheetManagement</a>
+        <p class="exp-info">Spring Boot REST Web Service project.</p>
+        <a href="https://github.com/AlenaChuvasova/_BookingService" target=_blank title="Github">BookingService</a>
+    </div>
+    <div class="cert">
+        <h3>Certificates:</h3>
+        <p>05.2019 Java EE Programming </p>
+        <p>11.2018 Java SE Programming</p>
+        <p>2014 Streamline Language School, Minsk </p>
+    </div>
+    <div class="core">
+        <h3>Core competencies:</h3>
+        <p class="core-text"></p>
+        <ul>
+            <li>Have successful teamwork experience on energy equipment supply projects.</li>
+            <li>New brands Implementation of the selling.</li>
+            <li>Lead and managed process of production power equipment.</li>
+        </ul>
+    </div>
+    <div class="prof_exp">
+        <h3>Professional experience:</h3>
+        <div class="inabi">
+            <div class="inabi_main">
+                10.2018 – 01.2020 Ltd «Inabitrade»<br/>
+                Engineer
+            </div>
+            <input type=radio class="inabi_more" name=inabi id=inabi1 value=1>
+            <label for=inabi1>show more</label>
+            <div class="inabi_obl">
+                <ul>
+                    <li>Represent company at all stages of public procurement (preparation of documentation,
+                        coordination of technical solutions, negotiation)
+                    </li>
+                    <li>Consultation and assistance in the selection of power supply equipment</li>
+                    <li>Assistance in writing technical specification (in the field of uninterrupted power supply)for
+                        private companies
+                    </li>
+                    <li>Technical customer support and customer service</li>
+                </ul>
+            </div>
+            <input type=radio class="inabi_more" name=inabi id=inabi2 checked value=2>
+            <label for=inabi2>hide</label>
+        </div>
+
+        <div class="si">
+            <div class="si_main">
+                07.2014 – 09.2018 OJSC «SVYAZINVEST»<br/>
+                Automation engineer
+            </div>
+            <input type=radio class="si_more" name=si id=si1 value=1>
+            <label for=si1>show more</label>
+            <div class="si_obl">
+                <ul>
+                    <li>Technical and documentary support of deals for the production and selling power equipment</li>
+                    <li>Participation in government procurement (electronic trade / auctions / open bidding, etc.)</li>
+                    <li>Analysis of the existing power supply market</li>
+                    <li>Search and attract new Suppliers / Customers</li>
+                </ul>
+            </div>
+            <input type=radio class="si_more" name=si id=si2 checked value=2>
+            <label for=si2>hide</label>
+        </div>
+
+        <div class="sencom">
+            <div class="sencom_main">
+                08.2012 – 10.2013 Ltd «Sencom»<br/>
+                Technician
+            </div>
+            <input type=radio class="sencom_more" name=sencom id=sencom1 value=1>
+            <label for=sencom1>show more</label>
+            <div class="sencom_obl">
+                <ul>
+                    <li>Collection project input data</li>
+                    <li>Selection of equipment, preparation of equipment specifications</li>
+                    <li>Preparation of construction object executive documentation</li>
+                </ul>
+            </div>
+            <input type=radio class="sencom_more" name=sencom id=sencom2 checked value=2>
+            <label for=sencom2>hide</label>
+        </div>
+    </div>
+    <div class="edu">
+        <h3>Education:</h3>
+        <p>2010 – 2014 Higher State College of Telecommunications, Faculty of Telecommunications
+            Specialty: Telecommunication networks
+            Qualifications: telecommunications engineer</p>
+        <br>
+        <p>2007 – 2010 Higher State College of Telecommunications, Faculty of Telecommunications
+            Specialty: Telecommunication networks
+            Qualifications: telecommunications technician</p>
+    </div>
+</div>
+</br>
+<a href="/page2">Back to menu</a>
+</body>
+</html>
